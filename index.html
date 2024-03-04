@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale = 1.0">
         <title>Weather App</title>
         <link rel="stylesheet" href = "styles.css">
@@ -11,7 +11,10 @@
             <label for="city">Enter city:</label>
             <input type="text" id="city" placeholder ='City name'>
             <button onclick = "fetchWeather()"> Get Weather</button>
-            <div id="weather-info"></div>
+            <div id="weather-info">
+                <div class="greeting" id="greeting"></div>
+            </div>
+            
         </div>
         <script src="script.js"></script>
     </body>

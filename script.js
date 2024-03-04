@@ -12,13 +12,29 @@ function fetchWeather() {
 }
 
 function displayWeather(weatherData) {
+    console.log("Displaying weather information: ", weatherData);
     const weatherInfo = document.getElementById('weather-info');
+    const container = document.querySelector('.container');
+    const greetingElement = document.getElementById('greeting');
 
     if (weatherData.cod === 200) {
         const cityName = weatherData.name;
         const temperature = weatherData.main.temp;
         const humidity = weatherData.main.humidity;
         const conditions = weatherData.weather[0].description;
+
+        // dynamic greeting based on temperature
+        let greeting = '';
+        if (temperature > 25) {
+            greeting = "A bit hot, isn't it 🔥Stay cool!";
+            container.computedStyleMap.backgroundColor = '#ffcccb';
+        } else if (temperature < 10) {
+            greeting = "Bundle up! ❄️ It's a bit chilly.";
+            container.style.backgroundColor = '#add8e6';
+        } else {
+            greeting = 'Enjoy the weather! 😊';
+            container.style.backgroundColor = '#fff';
+        }
 
         weatherInfo.innerHTML = `
             <h2>Weather Information:</h2>
@@ -27,6 +43,9 @@ function displayWeather(weatherData) {
             <p>Humidity: ${humidity}%</p>
             <p>Conditions: ${conditions}</p>
         `;
+        console.log("greeting: ", greeting);
+        greetingElement.textContent = greeting;
+
     } else {
         weatherInfo.innerHTML = '<p>Weather information not available.</p>';
     }
