@@ -2,7 +2,7 @@ function fetchWeather() {
     const city = document.getElementById('city').value;
 
     if (city) {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e7eb06ed659e4df5d930197cac5176f2&units=metric`)
+        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e7eb06ed659e4df5d930197cac5176f2&units=metric`)
             .then(response => response.json())
             .then(data => displayWeather(data))
             .catch(error => console.error('Error:', error));
