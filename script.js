@@ -27,7 +27,7 @@ function displayWeather(weatherData) {
         let greeting = '';
         if (temperature > 25) {
             greeting = "A bit hot, isn't it 🔥Stay cool!";
-            container.computedStyleMap.backgroundColor = '#ffcccb';
+            container.style.backgroundColor = '#ffcccb';
         } else if (temperature < 10) {
             greeting = "Bundle up! ❄️ It's a bit chilly.";
             container.style.backgroundColor = '#add8e6';
