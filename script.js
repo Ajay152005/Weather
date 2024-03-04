@@ -45,6 +45,7 @@ function displayWeather(weatherData) {
         `;
         console.log("greeting: ", greeting);
         greetingElement.textContent = greeting;
+        greetingElement.style.color = 'orange';  // Change color to blue temporarily
 
     } else {
         weatherInfo.innerHTML = '<p>Weather information not available.</p>';

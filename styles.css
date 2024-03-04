@@ -1,6 +1,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    background-image: url('bg1.png'); /* Adjust the file name accordingly */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin:0;
     display:flex;
     justify-content: center;
@@ -8,11 +12,13 @@ body {
     height:100vh;
 }
 
+
 .container{
     text-align: center;
     background-color: #fff;
     padding:20px;
-    border-radius:8px;
+    border: 2px solid black;
+    border-radius:12px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 
 }
@@ -41,8 +47,12 @@ button {
 }
 
 .greeting {
-    font-size: 16px;
+    font-size: 24px;
     font-weight: bold;
-    margin-top: 10px;
-    color: red;
+    font-family: 'Helvetica', sans-serif;
+    color: #ffffff;
+    position: absolute;
+    top: 20%; /* Adjust based on your preference */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
