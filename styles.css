@@ -5,41 +5,55 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    margin:0;
-    display:flex;
+    margin: 0;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:100vh;
+    height: 100vh;
 }
 
-
-.container{
+.container {
     text-align: center;
     background-color: #fff;
-    padding:20px;
+    padding: 20px;
     border: 2px solid black;
-    border-radius:12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%; /* Adjust the maximum width based on your preference */
+    margin: 20px; /* Add some margin for better spacing on smaller screens */
 }
 
 label {
     font-size: 18px;
     margin-right: 10px;
+    font-weight: bold;
+    color:#333;
 }
-
+.input-container {
+    display: flex;
+    align-items: center;
+}
 input {
+    border-radius: 10px;
+    margin-top: 10px;
     padding: 8px;
     font-size: 16px;
+    width: 100%; /* Make inputs take up the full width of the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
 button {
+    border-radius: 10px;
+    margin-top: 10px;
     padding: 8px 16px;
     font-size: 16px;
+    font-weight: bold;
     background-color: #3498db;
     color: #fff;
     border: none;
     cursor: pointer;
+    color: #000;
+    text-shadow: 0 0 8px #fff;
 }
 
 #weather-info {
@@ -47,12 +61,16 @@ button {
 }
 
 .greeting {
-    font-size: 49px;
+    font-size: 32px; /* Reduce font size for better mobile display */
     font-weight: bold;
+    @media (max-width: 768px) {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        white-space: nowrap;
+    }
     font-family: 'Helvetica', sans-serif;
     color: #ffffff;
     position: absolute;
-    top: 20%; /* Adjust based on your preference */
+    top: 10%; /* Adjust based on your preference */
     left: 50%;
     transform: translate(-50%, -50%);
 }
